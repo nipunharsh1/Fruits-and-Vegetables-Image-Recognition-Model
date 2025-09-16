@@ -1,2 +1,1 @@
-# fruit and vegetabale recognatation model
-DFDFnjdnvdncjd
+# Fruits and Vegetables Image Recognition Model
