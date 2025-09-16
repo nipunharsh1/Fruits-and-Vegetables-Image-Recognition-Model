@@ -47,3 +47,15 @@ def infer_image():
 
 if __name__ == '__main__':
     app.run(debug=False, host='0.0.0.0')
+
+    
+'''The main function of ec2_api.py is to provide a Flask-based REST API for fruit and vegetable image classification using a pre-trained Keras model (FV.h5).
+
+What it does:
+
+Loads the trained model and label mappings.
+Defines an API endpoint /predict that accepts POST requests with an image file.
+When an image is uploaded, it saves the image, preprocesses it, and uses the model to predict the class (e.g., carrot, apple).
+Returns the predicted label as a JSON response.
+In summary:
+This file allows you to send an image to the server and get back the predicted fruit or vegetable name, making your model accessible as a web service.'''
