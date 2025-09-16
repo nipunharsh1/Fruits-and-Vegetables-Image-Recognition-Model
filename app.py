@@ -24,13 +24,27 @@ vegetables = ['Beetroot', 'Cabbage', 'Capsicum', 'Carrot', 'Cauliflower', 'Corn'
 
 def fetch_calories(prediction):
     try:
-        url = 'https://www.google.com/search?&q=calories in ' + prediction
-        req = requests.get(url).text
-        scrap = BeautifulSoup(req, 'html.parser')
-        calories = scrap.find("div", class_="BNeawe iBp4i AP7Wnd").text
-        return calories
+        app_id = 'af090f89'
+        app_key = '7efd4f2fdc1e1fa089916e68c19feac8'
+        url = 'https://trackapi.nutritionix.com/v2/natural/nutrients'
+        headers = {
+            'x-app-id': app_id,
+            'x-app-key': app_key,
+            'Content-Type': 'application/json'
+        }
+        data = {
+            'query': prediction,
+            'timezone': 'US/Eastern'
+        }
+        response = requests.post(url, headers=headers, json=data)
+        result = response.json()
+        if 'foods' in result and len(result['foods']) > 0:
+            calories = result['foods'][0]['nf_calories']
+            return f"{calories} kcal per serving"
+        else:
+            return "Calorie info not found"
     except Exception as e:
-        st.error("Can't able to fetch the Calories")
+        st.error("Can't fetch the Calories")
         print(e)
 
 
