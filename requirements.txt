@@ -1,0 +1,9 @@
+
+numpy
+Pillow
+streamlit
+flask
+requests
+beautifulsoup4
+# Optional: if your model uses standalone keras imports
+keras
