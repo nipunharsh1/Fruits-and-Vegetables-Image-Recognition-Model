@@ -1,0 +1,68 @@
+.venv/
+.vscode/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+pip-wheel-metadata/
+*.egg
+build/
+dist/
+env/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+*.log
+*.sqlite3
+*.db
+# Model / large binary files
+*.h5
+*.ckpt
+*.pb
+*.onnx
+*.tflite
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+# Python virtual environment
+.venv/
+
+# VS Code settings
+.vscode/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# model weights and large data (uncomment if you don't want to store models)
+# FV.h5
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
